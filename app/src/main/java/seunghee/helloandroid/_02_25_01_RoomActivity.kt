@@ -109,9 +109,10 @@ class _02_25_01_RoomActivity : AppCompatActivity() {
  * implementation "androidx.room:room-ktx:$room_version"
  * // optional - Test helpers
  * testImplementation "androidx.room:room-testing:$room_version"
- *
- *
- * entity 정의하기
+ */
+
+
+/* entity 정의하기
  * entity 는 데이터베이스 컬럼명과 1:1 대응되는 자바/코틀린 객체를 의미함
  *
  * @Entity      : 자바/코틀린 객체 정의, table_name 속성으로 1:1 대응할 테이블명 지정
@@ -119,11 +120,22 @@ class _02_25_01_RoomActivity : AppCompatActivity() {
  * @ColumnInfo  : 테이블의 컬럼명과 멤버변수를 다르게 지정할때 사용
  *                  @ColumnInfo(name="name") var bkname:String
  *                  테이블 컬럼명              멤버 변수명
- *
- * dao 정의하기
+ */
+
+/* dao 정의하기
  * dao 는 데이터베이스에 접근해서 CRUD 관련 작업을 실행하는 코드를 인터페이스/추상클래스로 정의
  * @Insert, @Update, @Delete 와 @Query 등을 이용해서 관련 코드를 작성해 둠
+ */
+
+
+/* Thread 와 Process
+ * Process : 시작에서 종료까지 순차적으로 실행하는 방식의 프로그램, 단일 프로그램
+ *           즉, 하나의 코드 실행 흐름으로 처리하는 방식에 주로 사용
+ * Thread  : 프로세스 내에서 실행되는 각각의 독립적인 실행 흐름 하나의 프로세스 내에서
+ *           여러개의 쓰레드가 동작하도록 프로그래밍 하는 것을 멀티쓰레드라 함
  *
- * database 정의하기
- *
+ * 쓰레드 작성방법
+ * 1. Thread 클래스를 상속함
+ * 2. run 매서드를 오버라이드함
+ * 3. 클래스의 객체를 start() 로 호출함
  */

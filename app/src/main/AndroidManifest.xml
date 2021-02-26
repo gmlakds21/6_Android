@@ -4,7 +4,8 @@
     <!-- 02_18 외부저장소 파일 입출력 쓰기 -->
     <!-- application 에 requestLegacyExternalStorage 도 추가해야함 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 02_26 JDBC 프로그래밍을 위한 설정 -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -14,6 +15,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloAndroid">
+        <activity android:name="._02_26_06_HelloWebAppActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="._02_26_04_ProgressActivity"
+            android:label="26_2_Progress">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="._02_26_01_HelloJDBCActivity"
+            android:label="26_01_JDBC">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="._02_25_01_RoomActivity"
             android:label="25_02_Room">
@@ -33,8 +59,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- -->
+        </activity> <!--  -->
         <activity
             android:name="._02_24_01_HelloDatabase"
             android:label="24_01_Database">
